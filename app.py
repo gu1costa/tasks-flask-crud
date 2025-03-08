@@ -20,7 +20,7 @@ def create_task():
     task_id_control += 1
     tasks.append(new_task)
     print(tasks)
-    return jsonify({"message": "Nova tarefa criada com sucesso."}) #jsonify vem do flask que transforma o conteúdo de um dicionário em json ou xml. as normas da API REST exigem que retorne json/xml
+    return jsonify({"message": "Nova tarefa criada com sucesso.", "id": new_task.id}) #jsonify vem do flask que transforma o conteúdo de um dicionário em json ou xml. as normas da API REST exigem que retorne json/xml
 
 #Read
 @app.route("/tasks", methods=['GET'])
